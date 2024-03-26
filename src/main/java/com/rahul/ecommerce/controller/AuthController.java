@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+//authentication controller ..all authentication api will hit here
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
@@ -79,7 +81,9 @@ public class AuthController {
 	        return new ResponseEntity<AuthResponse>(authResponse,HttpStatus.OK);
 		
 	}
-	
+
+
+
 	@PostMapping("/signin")
     public ResponseEntity<AuthResponse> signin(@RequestBody LoginRequest loginRequest) {
         String username = loginRequest.getEmail();
