@@ -82,9 +82,7 @@ public class AuthController {
 		
 	}
 
-//Sing in authentication
-	//delete this commnent
-
+	//for sign
 	@PostMapping("/signin")
     public ResponseEntity<AuthResponse> signin(@RequestBody LoginRequest loginRequest) {
         String username = loginRequest.getEmail();
